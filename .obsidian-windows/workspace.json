@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c10f90203ca2b1a",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md"
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md"
               }
             }
           },
@@ -162,10 +161,13 @@
   },
   "active": "7347deec23b98bd8",
   "lastOpenFiles": [
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/deadlock.png",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/cpu-and-ram.png",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/java-signal.png",
     "templates/note.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization",
@@ -184,7 +186,6 @@
     "obsidian-backup/plugins/url-into-selection/manifest.json",
     "obsidian-backup/plugins/url-into-selection/main.js",
     "obsidian-backup/plugins/remember-cursor-position/manifest.json",
-    "obsidian-backup/plugins/remember-cursor-position/main.js",
-    "obsidian-backup/plugins/obsidian-paste-image-rename/styles.css"
+    "obsidian-backup/plugins/remember-cursor-position/main.js"
   ]
 }
