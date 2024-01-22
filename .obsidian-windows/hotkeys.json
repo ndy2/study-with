@@ -112,6 +112,13 @@
         "Mod"
       ],
       "key": "A"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "A"
     }
   ],
   "floating-toc:hide-toc-panel": [

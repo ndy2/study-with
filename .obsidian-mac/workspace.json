@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md"
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md"
               }
             }
           }
@@ -150,11 +150,18 @@
   "active": "a1016930451802a6",
   "lastOpenFiles": [
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
+    "templates/quote.md",
+    "templates/note.md",
+    "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
+    "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka",
+    "books/Kafka-The-Definitive-Guide",
+    "books",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/deadlock.png",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization",
     "Untitled.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization"
   ]
