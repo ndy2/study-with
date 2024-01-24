@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ccca65a8a8828a50",
+        "id": "84d34209100759c5",
         "type": "tabs",
         "children": [
           {
-            "id": "b47869dce4772b0b",
+            "id": "7347deec23b98bd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -95,6 +95,10 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+>>>>>>> 4140a19f191e0d866e4770c36f8d74fe85d55313
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,6 +115,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+>>>>>>> 4140a19f191e0d866e4770c36f8d74fe85d55313
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +140,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+<<<<<<< HEAD
               "state": {}
+=======
+              "state": {
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md"
+              }
+>>>>>>> 4140a19f191e0d866e4770c36f8d74fe85d55313
             }
           },
           {
@@ -156,15 +170,16 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Open command palette": false
     }
   },
+<<<<<<< HEAD
   "active": "5db23862716bc922",
   "lastOpenFiles": [
     "books/Kafka-The-Definitive-Guide/Chapter03-Kafka-Producers/README.md",
@@ -174,16 +189,29 @@
     "templates/example-list.md",
     "templates/docs.md",
     "README.md",
+=======
+  "active": "7347deec23b98bd8",
+  "lastOpenFiles": [
+    "templates/question.md",
+    "templates/note.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/images/compare-and-swap.png",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/images/syncrhonized-block.png",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/images/Pasted image 20240122221716.png",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/images",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization",
+    "templates/quote.md",
+    "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
+>>>>>>> 4140a19f191e0d866e4770c36f8d74fe85d55313
     "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka",
     "books/Kafka-The-Definitive-Guide",
     "books",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/deadlock.png",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/cpu-and-ram.png",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/java-signal.png",
-    "templates/note.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/README.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization",
@@ -193,9 +221,15 @@
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/excalidraws",
     "templates/reference.md",
     "templates/pros-and-cons.md",
+    "templates/example-list.md",
+    "templates/docs.md",
     "notes/README.md",
     "templates/warning.md",
+<<<<<<< HEAD
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section05-fundamentals-of-synnchrnoization/README.md",
     "notes"
+=======
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section05-fundamentals-of-synnchrnoization/README.md"
+>>>>>>> 4140a19f191e0d866e4770c36f8d74fe85d55313
   ]
 }
