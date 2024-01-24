@@ -13,13 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
+                "file": "books/Kafka-The-Definitive-Guide/Chapter03-Kafka-Producers/README.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "5db23862716bc922",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8c10f90203ca2b1a",
@@ -85,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +132,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -159,10 +165,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b47869dce4772b0b",
+  "active": "5db23862716bc922",
   "lastOpenFiles": [
-    "templates/quote.md",
+    "books/Kafka-The-Definitive-Guide/Chapter03-Kafka-Producers/README.md",
     "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
+    "books/Kafka-The-Definitive-Guide/Chapter03-Kafka-Producers",
+    "templates/quote.md",
     "templates/example-list.md",
     "templates/docs.md",
     "README.md",
@@ -188,7 +196,6 @@
     "notes/README.md",
     "templates/warning.md",
     "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section05-fundamentals-of-synnchrnoization/README.md",
-    "notes",
-    "obsidian-backup/plugins/url-into-selection/manifest.json"
+    "notes"
   ]
 }
