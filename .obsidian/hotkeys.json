@@ -2,12 +2,6 @@
   "insert-template": [
     {
       "modifiers": [
-        "Alt"
-      ],
-      "key": "T"
-    },
-    {
-      "modifiers": [
         "Mod"
       ],
       "key": "T"
@@ -17,16 +11,69 @@
   "app:toggle-left-sidebar": [
     {
       "modifiers": [
-        "Alt"
-      ],
-      "key": "1"
-    },
-    {
-      "modifiers": [
         "Mod"
       ],
       "key": "1"
     }
   ],
-  "workspace:goto-tab-1": []
+  "workspace:goto-tab-1": [],
+  "app:open-settings": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": ","
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    },
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "S"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "A"
+    },
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "A"
+    }
+  ],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "E"
+    }
+  ],
+  "markdown:toggle-preview": []
 }
