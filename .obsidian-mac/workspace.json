@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "687f5b9b729a6139",
+    "id": "21529f01f99cb9b7",
     "type": "split",
     "children": [
       {
-        "id": "be0c1b0787d63a1a",
+        "id": "84d34209100759c5",
         "type": "tabs",
         "children": [
           {
-            "id": "a1016930451802a6",
+            "id": "7347deec23b98bd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section10-java-syncrhonization-framework/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b159761d42ee81ed",
+    "id": "68787e77a64b644f",
     "type": "split",
     "children": [
       {
-        "id": "aa5cf4789fe6361d",
+        "id": "357528186c4dbd54",
         "type": "tabs",
         "children": [
           {
-            "id": "bc21bdb842b495c7",
+            "id": "7be98c7138f23681",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "7d811150402f3deb",
+            "id": "31b0c3425b249bd8",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "093fdfef21bc6d47",
+            "id": "944060a5fda17aff",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,23 +69,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "86845f0fa44d657a",
+    "id": "8c10f90203ca2b1a",
     "type": "split",
     "children": [
       {
-        "id": "8b9f52501a80dd2c",
+        "id": "e2efa71250447bd7",
         "type": "tabs",
         "children": [
           {
-            "id": "04dc8c2257abfcde",
+            "id": "02ab5313fe11e9b5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section10-java-syncrhonization-framework/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +98,19 @@
             }
           },
           {
-            "id": "2487f1f0ccd1eea9",
+            "id": "2f9917c2c29ab0fc",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section10-java-syncrhonization-framework/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "393478e87ac414cf",
+            "id": "974c9fd6654111a3",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +121,24 @@
             }
           },
           {
-            "id": "91d39dd1b8f693c7",
+            "id": "c45525dcff90363c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md"
+                "file": "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section10-java-syncrhonization-framework/README.md"
+              }
+            }
+          },
+          {
+            "id": "0ba2ca3b3da68fc5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -138,31 +151,37 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "a1016930451802a6",
+  "active": "7347deec23b98bd8",
   "lastOpenFiles": [
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks/README.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization/README.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/README.md",
-    "templates/quote.md",
-    "templates/note.md",
-    "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka/README.md",
-    "books/Kafka-The-Definitive-Guide/Chapter01-Meet-Kafka",
-    "books/Kafka-The-Definitive-Guide",
-    "books",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section08-java-locks",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization/images/deadlock.png",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section09-java-syncrhonization",
-    "Untitled.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/README.md",
-    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section07-java-synchronization"
+    "notes/inflearn/자바-동시성-프로그래밍-리액티브-part1/section10-java-syncrhonization-framework/README.md",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/images/java-monitor.png",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/images",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/excalidraws/monitor.excalidraw.md",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/README.md",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section06-fundamentals-of-synchronization/excalidraws",
+    "templates/reference.md",
+    "templates/pros-and-cons.md",
+    "templates/example-list.md",
+    "templates/docs.md",
+    "notes/README.md",
+    "templates/warning.md",
+    "lectures/inflearn/자바-동시성-프로그래밍-리액티브-part1/section05-fundamentals-of-synnchrnoization/README.md",
+    "notes",
+    "obsidian-backup/plugins/url-into-selection/manifest.json",
+    "obsidian-backup/plugins/url-into-selection/main.js",
+    "obsidian-backup/plugins/remember-cursor-position/manifest.json",
+    "obsidian-backup/plugins/remember-cursor-position/main.js",
+    "obsidian-backup/plugins/obsidian-paste-image-rename/styles.css",
+    "obsidian-backup/plugins/obsidian-paste-image-rename/manifest.json",
+    "obsidian-backup/plugins/obsidian-paste-image-rename/main.js"
   ]
 }
