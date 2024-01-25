@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aacc94d17c8f4d8f",
+        "id": "e84bd8017ffc1153",
         "type": "tabs",
         "children": [
           {
-            "id": "92aa24e1d9bfabde",
+            "id": "16e9e7593f025c46",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -120,6 +120,18 @@
               "type": "outline",
               "state": {}
             }
+          },
+          {
+            "id": "1f3347af8caf80aa",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
           }
         ]
       }
@@ -130,6 +142,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -138,6 +151,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "92aa24e1d9bfabde",
+  "active": "16e9e7593f025c46",
   "lastOpenFiles": []
 }

@@ -5,6 +5,12 @@
         "Mod"
       ],
       "key": "T"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
     }
   ],
   "workspace:new-tab": [],
@@ -37,6 +43,20 @@
         "Mod"
       ],
       "key": "S"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "S"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "S"
     }
   ],
   "command-palette:open": [
@@ -59,6 +79,26 @@
         "Mod"
       ],
       "key": "A"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "A"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "A"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "A"
     }
   ],
   "switcher:open": [
@@ -73,7 +113,41 @@
         "Mod"
       ],
       "key": "E"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "E"
     }
   ],
-  "markdown:toggle-preview": []
+  "markdown:toggle-preview": [],
+  "workspace:close": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "W"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "W"
+    }
+  ],
+  "floating-toc:hide-toc-panel": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
+    }
+  ]
 }
