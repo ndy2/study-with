@@ -20,6 +20,12 @@
         "Mod"
       ],
       "key": "1"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
     }
   ],
   "workspace:goto-tab-1": [],
@@ -149,5 +155,6 @@
       ],
       "key": "Q"
     }
-  ]
+  ],
+  "graph:open": []
 }
