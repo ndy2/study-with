@@ -1,0 +1,12 @@
+{
+  "errorNoticeTimeout": 0,
+  "language": "",
+  "noticeTimeout": 5,
+  "openChangelogOnUpdate": false,
+  "showConfigurationFolder": false,
+  "showHiddenFiles": true,
+  "showingRules": [
+    "-/",
+    "+\\.assets"
+  ]
+}

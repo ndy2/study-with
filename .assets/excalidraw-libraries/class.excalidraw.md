@@ -51,8 +51,8 @@ C ^haJ1LJWq
 		},
 		{
 			"type": "text",
-			"version": 77,
-			"versionNonce": 1301683743,
+			"version": 78,
+			"versionNonce": 57206213,
 			"isDeleted": false,
 			"id": "haJ1LJWq",
 			"fillStyle": "solid",
@@ -65,7 +65,7 @@ C ^haJ1LJWq
 			"y": -229.5374984741211,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "#30385f",
-			"width": 23.183990478515625,
+			"width": 22.2890625,
 			"height": 45,
 			"seed": 1916946161,
 			"groupIds": [
@@ -74,7 +74,7 @@ C ^haJ1LJWq
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706247568033,
+			"updated": 1706269854873,
 			"link": null,
 			"locked": false,
 			"fontSize": 36,
@@ -86,7 +86,7 @@ C ^haJ1LJWq
 			"containerId": null,
 			"originalText": "C",
 			"lineHeight": 1.25,
-			"baseline": 31
+			"baseline": 38
 		}
 	],
 	"appState": {
@@ -104,7 +104,7 @@ C ^haJ1LJWq
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 531.5077839517921,
+		"scrollX": 530.5077839517921,
 		"scrollY": 391.6786235226616,
 		"zoom": {
 			"value": 2
