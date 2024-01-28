@@ -115,6 +115,52 @@ consumer 가 heartbeat 를 보내지 않고 살아 있을 수 있는 시간을 �
 
 # Commits and Offsets
 
+`poll()` 을 호출 하면 호출한 group 의 consumers 가 아직 읽지 않은 records 를 반환합니다. 그 말은 group 내의 consumer 가 어떤 record 까지 읽었는지 tracking 하는 방법이 있다는 것을 의미합니다. Kafka 의 독특한 특징은 Kafka 가 각 Consumer 의 위치를 추적하는 것이 아니라 각 Consumer 가 담당하는 Partition 에서 자신의 위치 (offset)를 관리한다는 점입니다.
+
+Partition 에서 현재 위치를 업데이트 하는 것을 `commit` 이라고 합니다.
+
+Consumer 는` __consumer_offset` 토픽에 메시지를 발행함으로써 offset 을 commit 합니다. 모든 consumer 가 죽지않고 잘 동작한다면, 이 토픽은 아무런 짓을 하지 않습니다. 하지만, consumer 가 죽거나 새로운 consumer 가 group 에 추가된다면, 이 토픽은 rabalance 를 발생시킵니다. rebalance 이후에, 각 consumer 는 새로운 partition 을 담당하게 됩니다. 이때, consumer 는 어디서부터 읽어들어야 할지 알 기 위해서 각 partition 의 latest committed offset 을 읽습니다.
+
+## Last committed offset & Rebalance
+
+리밸런싱이 발생하면 마지막 커밋을 찍은 위치에 따라 데이터가 중복 처리되거나 처리 되지 않을 수 있습니다.
+
+조회 이후 commit 을 찍지 않은 경우
+
+![[last-committed-offset-1.excalidraw]]
+
+조회 하자마자 commit 을 찍은 경우
+
+![[last-committed-offset-2.excalidraw]]
+
+offset 을 관리 하는 것은 client (처리) 애플리케이션에 큰 영향을 준다. KafkaConsumer 는 offset 을 찍는 몇가지 방법을 제공한다.
+
+## Automatic Commit
+
+가장 쉬운 방법은 자동 커밋을 찍는 것이다. `enable.auto.commit=true` 설정을 준다면, consumer 는 client 가 `poll()` 을 통해 조회한 데이터의 offset 중 가장 큰 값을 5초 마다 commit 한다. 자동 커밋의 interval 은 `auto.commit.interval.ms` 속성을 통해 정할 수 있다.
+
+자동 커밋은 poll loop 와 함께 동작한다. 즉 poll 이 수행될 때 마다 5초가 지났는지 확인하고 지났다면 커밋을 찍는 방식으로 동작한다.
+
+> [!warning] 자동 커밋의 본질적 한계
+> * 자동 커밋은 본질적으로 duplicated process 를 낳을 수 있다.
+> * poll 이 매 3초 이루어 진다고 가정하자. 이때 첫번째 poll 시에는 commit 을 찍지만 두번째 poll 시에는 5초가 되지 않았으므로 commit 을 찍지 않고 그 상황에서 rebalance 가 발생하면 두번째 poll 에 대한 last committed offset 업데이트가 이루어 지지 않았으므로 다른 consumer 는 이를 중복 처리 하게 된다.
+
+## Commit Current Offset
+
+Kafka consumer API 는 시간에 기반한 자동 커밋 외에도 직접 커밋을 찍는 기능을 제공한다.
+
+### `commitSync()`
+
+`commitSync()` 는 poll() 을 통해 조회한 데이터의 lastest offset 을 동기적으로 커밋한다. commit 자체가 데이터가 잘 처리 되었음을 보장하지 않으므로 항상 모든 데이터를 잘 처리한 다음 commit 을 호출 해야한다.
+
+### `commitAsync()`
+
+성능을 위해 비동기적 commit 을 수행할 수 도 있다. 이 경우 재시도 할 수 있는 예외를 만나도 재시도 하지는 못한다. 그 이유는 잘 생각해보자.
+
+## Commit Specified Offset
+
+
+
 # Rebalance Listeners
 
 # 특정한 offset 의 Record 를 읽기
@@ -122,6 +168,35 @@ consumer 가 heartbeat 를 보내지 않고 살아 있을 수 있는 시간을 �
 # Exit Poll Loop Cleanly
 
 # Deserializers
+
+앞서 살펴본 Customer 데이터에 대한 역직렬화기이다.
+
+```scala
+package kafka.pure.customer  
+  
+import org.apache.kafka.common.errors.SerializationException  
+import org.apache.kafka.common.serialization.Deserializer  
+  
+import java.nio.ByteBuffer  
+  
+class CustomerDeserializer extends Deserializer[Customer] {  
+  
+  override def deserialize(topic: String, data: Array[Byte]): Customer = {  
+    try {  
+      val buffer = ByteBuffer.wrap(data)  
+  
+      val id = buffer.getInt()  
+      val nameSize = buffer.getInt()  
+      val nameBytes = new Array[Byte](nameSize)  
+      val name = new String(nameBytes, "UTF-8")  
+  
+      Customer(id, name)  
+    } catch {  
+      case e: Exception => throw new SerializationException("Error when deserializing byte[] to Customer " + e)  
+    }  
+  }  
+}
+```
 
 # Consumer without Consumer Group
 
