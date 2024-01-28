@@ -167,7 +167,7 @@ Avro 는 Json 으로 직렬화 방식을 표현합니다. 만약 데이터가 �
 
 schema registry 는 데이터를 읽는 측과 쓰는 측에서 필요한 schema 를 한곳에서 관리하기 위해 사용합니다. schema registry 는 Apache Kafka 의 프로젝트는 아니며 다양한 구현 프로젝트가 있습니다. 
 
-Apache Avro 의 등장 배경 및 간략한 예제는 [Baeldung > Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)을 참고 하자.
+Apache Avro 를 포함한 Schema Registry 패턴에 대한 이해는 이책의 범위를 넘어섭니다. 등장 배경 및 간략한 예제는 [Baeldung > Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)을 참고 합시다.
 
 ## Partitions
 

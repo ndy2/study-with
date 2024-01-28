@@ -121,7 +121,69 @@ consumer 가 heartbeat 를 보내지 않고 살아 있을 수 있는 시간을 �
 
 # Exit Poll Loop Cleanly
 
+지금껏 poll loop 를 무한 루프고 구성해 왔지만 loop 을 적절히 exit 하는 방법에 대해서는 이야기 하지 않았습니다. 이 절에서는 그 내용을 다룹니다.
+
+> [!quote] 참고 자료
+> * full example at http://bit.ly/2u47e9A.
+
+-  **사전 지식** - java runtime & shutdownhook
+
+```java
+public static void main(String[] args) throws InterruptedException {  
+    Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println("shutdown")));  
+  
+    while (true) {  
+        System.out.println("working...");  
+        Thread.sleep(1000);  
+    }  
+}
+```
+
+```text title="실행 결과"
+working...
+working...
+working... <- press `control + c` or kill process
+shutdown
+```
+Java 의 `java.lang.Runtime` 을 통해 프로세스가 종료될 시 실행할 쓰레드를 hook 으로 추가 할 수 있다.
+
+```java
+Runtime.getRuntime().addShutdownHook(new Thread() {
+  public void run() {
+    System.out.println("Starting exit...");
+    consumer.wakeup(); // (1)!
+    try {
+      mainThread.join();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+  }
+});
+...
+try {
+  // looping until ctrl-c, the shutdown hook will cleanup on exit
+  while (true) {
+    ConsumerRecords <String, String> records = movingAvg.consumer.poll(1000);
+    System.out.println(System.currentTimeMillis() + "--waiting for data...");
+    for (ConsumerRecord < String, String > record: records) {
+        System.out.printf("offset = %d, key = %s, value = % s\ n ",
+          record.offset(), record.key(), record.value());
+      }
+    }
+  } catch (WakeupException e) {
+    // ignore for shutdown // (2)! 
+  } finally {
+    consumer.close(); // (3)!
+    System.out.println("Closed consumer and we are done");
+  }
+}
+```
+
+1. ShutdownHook 은 별도의 스레드에서 실행 되므로 `consumer.wakeup` 을 호출하여 poll loop 를 탈출하도록 할 수 있다.
+2. wakeup 이 수행되면 이후의 poll 메서드에서 WakeupException 이 발생하고 이를 잡을 수 있다. 하지만 해줘야 할 것은 없다.
+3. finally 구문에서 자원을 잘 정리한다.
 # Deserializers
+
 
 # Consumer without Consumer Group
 
