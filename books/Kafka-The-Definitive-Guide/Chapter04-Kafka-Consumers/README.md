@@ -159,11 +159,18 @@ Kafka consumer API 는 시간에 기반한 자동 커밋 외에도 직접 커밋
 
 ## Commit Specified Offset
 
-
+> [!todo] 
+> To Be Done
 
 # Rebalance Listeners
 
+> [!todo] 
+> To Be Done
+
 # 특정한 offset 의 Record 를 읽기
+
+> [!todo] 
+> To Be Done
 
 # Exit Poll Loop Cleanly
 
@@ -260,3 +267,5 @@ class CustomerDeserializer extends Deserializer[Customer] {
 ```
 # Consumer without Consumer Group
 
+> [!todo] 
+> To Be Done

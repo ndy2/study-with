@@ -148,7 +148,7 @@
             "containerId": null,
             "originalText": "C",
             "lineHeight": 1.25,
-            "baseline": 32
+            "baseline": 31
           },
           {
             "type": "rectangle",
@@ -349,7 +349,7 @@
             "containerId": null,
             "originalText": "I",
             "lineHeight": 1.25,
-            "baseline": 32
+            "baseline": 31
           }
         ],
         "created": 1706247580861
@@ -426,7 +426,7 @@
             "containerId": null,
             "originalText": "C",
             "lineHeight": 1.25,
-            "baseline": 32
+            "baseline": 31
           }
         ],
         "created": 1706247569724
