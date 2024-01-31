@@ -118,7 +118,7 @@ consumer 가 heartbeat 를 보내지 않고 살아 있을 수 있는 시간을 �
 poll 의 간격을 설정한다. 한번 poll 이 발생한 다음 이 시간 간격 이 내에 다음 poll 이 호출 되지 않으면 consummer 가 죽은것으로 판단된다. 이때 group 은 해당 consummer 가 담당하던 partition 의 새로운 담당자를 선정하기 위해 rebalance 를 수행 한다.
 - default : 300000 (5 minutes)
 
-# Commits and Offsets
+# Commits and Offsetsz
 
 `poll()` 을 호출 하면 호출한 group 의 consumers 가 아직 읽지 않은 records 를 반환합니다. 그 말은 group 내의 consumer 가 어떤 record 까지 읽었는지 tracking 하는 방법이 있다는 것을 의미합니다. Kafka 의 독특한 특징은 Kafka 가 각 Consumer 의 위치를 추적하는 것이 아니라 각 Consumer 가 담당하는 Partition 에서 자신의 위치 (offset)를 관리한다는 점입니다.
 
