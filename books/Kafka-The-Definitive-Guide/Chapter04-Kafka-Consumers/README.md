@@ -112,6 +112,11 @@ consumer 가 heartbeat 를 보내지 않고 살아 있을 수 있는 시간을 �
 
 `max.poll.records`
 한번의 `poll()` 호출을 통해 조회할 record 개수의 최댓값을 설정한다.
+- default : 500
+
+`max.poll.interval.ms`
+poll 의 간격을 설정한다. 한번 poll 이 발생한 다음 이 시간 간격 이 내에 다음 poll 이 호출 되지 않으면 consummer 가 죽은것으로 판단된다. 이때 group 은 해당 consummer 가 담당하던 partition 의 새로운 담당자를 선정하기 위해 rebalance 를 수행 한다.
+- default : 300000 (5 minutes)
 
 # Commits and Offsets
 
@@ -159,8 +164,48 @@ Kafka consumer API 는 시간에 기반한 자동 커밋 외에도 직접 커밋
 
 ## Commit Specified Offset
 
-> [!todo] 
-> To Be Done
+시간에 기반한 auto commit 이나 last polled offset 을 기준으로 commit 을 수행하는 `commitSync`, `commitAsync` 로는 기능이 부족하다고 느낄 수 있다. 이를 해결하기 위해 Kafka 는 특정한 record /offset 에 대한 commit 을 찍는 consumer api 를 제공한다.
+
+`commitSync` 와 `commitAsync` 는 기본적으로 인자를 받지 않는 경우 lastest offset 에 대한 commit 을 수행하며 `Map<TopicPartition, OffsetAndMetadata>` 를 인자로 받는 메서드도 정의 되어 있다. 이 인자를 이용해 특정 offset 에 대한 commit 을 수행 할 수 있다.
+
+
+```java title="org.apache.kafka.clients.consumer.KafkaConsumer.commitSync"
+
+/**  
+ * Commit the specified offsets for the specified list of topics and partitions.  * 
+ * 이 API 를 통해 commit 된 offset 의 데이터는 다음 fetch 의 대상이 됩니다.
+ * 즉 이상적으로는 lastProcessedMessageOffset + 1 을 메 처리마다 commit 해버리면 rebalance 발생시 데이터가 중복 처리되거나 미 처리될 가능성이 없습니다.
+ */
+ 
+@Override  
+public void commitSync(final Map<TopicPartition, OffsetAndMetadata> offsets) {  
+    commitSync(offsets, Duration.ofMillis(defaultApiTimeoutMs));  
+}
+```
+
+이 api 를 이용해 poll 한 데이터를 1000 개 처리 할 때 마다 commit 을 수행하는 예제코드를 살펴보자.
+
+```java
+private Map < TopicPartition, OffsetAndMetadata > currentOffsets =
+  new HashMap < > ();
+int count = 0;
+....
+while(true) {
+  ConsumerRecords < String, String > records = consumer.poll(100);
+  for (ConsumerRecord < String, String > record: records) {
+    System.out.printf("topic = %s, partition = %s, offset = %d,
+      customer = % s, country = % s\ n ",
+      record.topic(), record.partition(), record.offset(),
+      record.key(), record.value());
+    currentOffsets.put(new TopicPartition(record.topic(),
+      record.partition()), new OffsetAndMetadata(record.offset() + 1, "no metadata"));
+    if (count % 1000 == 0)
+      consumer.commitSync(currentOffsets);
+    count++;
+  }
+}
+```
+
 
 # Rebalance Listeners
 
