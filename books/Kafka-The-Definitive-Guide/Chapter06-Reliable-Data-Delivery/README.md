@@ -24,7 +24,6 @@ description: ""
 > * commit 은 이미 fetch 한 데이터를 어디까지 읽었다고 메시지를 남기는 것 아닌가?
 > * 여기서 말하는 commit 은 의미가 좀 다른 것 같다.
 
-
 # Replication
 
 Replication 메커니즘은 Kakfa Reliability 에서 가장 중요한 개념입니다. Replication 에 대해선 [[books/Kafka-The-Definitive-Guide/Chapter05-Kafka-Internals/README|Chatper05-Kafka-Internals]] 에서 자세하게 다루었습니다. 잠깐 중요한 내용을 복습합시다.
@@ -35,25 +34,28 @@ Replication 메커니즘은 Kakfa Reliability 에서 가장 중요한 개념입�
 > * 한 topic 을 구성하는 partition 은 하나의 leader partition 과 그렇지 않은 follower partition 으로 나뉜다.
 > * 데이터의 읽기/쓰기 작업은 모두 leader 를 통해 이루어지며 follower 은 leader 에 대한 sync 를 유지한다.
 
-
-
 # Reliable Broker
+
+Kafka 의 안정적인 데이터 저장과 관련된 브로커의 세가지 설정이 있습니다. 이들은 브로커 레벨에 적용될 수도 있고 Topic 레벨에 적용 될 수 도 있다.
 
 ## `replication.factor`
 
-> [!todo] 
-> To Be Done
-
+- 한 토픽이 replica 를 총 몇개 가질지 결정한다.
+- 브로커 레벨에 적용할 때는 `default.replication.factor` 를 사용한다.
+- 기본값은 3 이다.
+- replication factor 가 N 이라면 N - 1 개의 replica 를 잃더라도 토픽에 데이터를 읽고 쓰기를 수행할 수 있다.
+- 높으면 안정적이지만 그 만큼 디스크를 많이 차지 하며 관리가 어렵다.
 ## `unclean.leader.election.enable`
 
-> [!todo] 
-> To Be Done
-
+- unclean leader election 이란 ISR 이 아닌 Out-Sync Replica 가 토픽의 leader replica 이 되는 것을 의미합니다. 기본적으로 leader 가 unabailable 해 지면 In-Sync Replica 중 한 replica 가 새로운 leader 가 됩니다.
+- 이때 In-Sync Replica 가 없고 OSR 만 있는 상황에서 ISR 이 없다면 이를 계속 대기 할 것입니다. 이는 카프카 메시지의 가용성에 상당한 제약입니다.
+- `unclean.leader.election.enable` 옵션을 통해 OSR 이 새로운 leader replica 가 될 수 있습니다.
+- 반면 이때 데이터의 손실 혹은, 중복 처리등의 부작용이 발생 할 수 있습니다.
 ## `min.insync.replicas`
 
-> [!todo] 
-> To Be Done
-
+- `min.insync.replicas` 는 데이터 쓰기 연산을 수행하기 위해 필요한 최소한의 in-sync replica 의 숫자를 의미합니다.
+- 만약 replica 가 3 인 topic 의 한 파티션에 leader replica 를 제외한 나머지 replica 가 OSR 이라면 follow-up 이 잘 이루어지지 않은 replica 를 유지한채 계속 leader replica 에 데이터를 밀어 넣는것이 부담 스럽다고 생각 될 수 있습니다.
+- 이 경우 `min.insync.replicas` 설정을 통해 최소한의 in-sync replica 숫자를 설정 함으로써 조건이 충족되지 않는 경우 Producer 의 데이터 write 요청에  `NotEnoughReplicasException`을 반환 할 수 있습니다.
 # Reliable Producer
 
 ## `acks`
