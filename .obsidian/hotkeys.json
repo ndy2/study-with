@@ -156,5 +156,19 @@
       "key": "Q"
     }
   ],
-  "graph:open": []
+  "graph:open": [],
+  "editor:fold-more": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Key23"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "-"
+    }
+  ]
 }
